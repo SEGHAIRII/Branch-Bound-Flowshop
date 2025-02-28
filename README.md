@@ -23,17 +23,17 @@ This project implements a simplified Branch-and-Bound (B&B) algorithm for solvin
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/SEGHAIRII/Branch-Bound-Flowshop.git
-   cd Branch-Bound-Flowshop```
+   cd Branch-Bound-Flowshop
 
 2. **Create a Build Directory**:
     ```bash
     mkdir build
-    cd build```
+    cd build
 
 3. **Run CMake**:
     ```bash
-    cmake ..```
+    cmake ..
 
 4. **Compile**:
     ```bash
-    make```
+    make
