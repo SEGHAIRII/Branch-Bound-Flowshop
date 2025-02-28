@@ -3,18 +3,19 @@
 This project implements a simplified Branch-and-Bound (B&B) algorithm for solving the Permutation Flow-Shop Scheduling Problem (PFSP) with the objective of minimizing makespan. It uses static forward branching and the one-machine lower bound (LB1), based on the paper "A computationally efficient Branch-and-Bound algorithm for the permutation flow-shop scheduling problem" by Gmys et al. (2020).
 
 ## Prerequisites
-- **CMake**: Version 3.10 or higher.
-- **C++ Compiler**: Supporting C++17 (e.g., GCC, Clang, MSVC).
+- **CMake**
+- **C++ Compiler**
 
 ## Input file structure:
 - first line: n m
 - next n lines : line i represents the time needed for task i on all machines
 - Example:
+```
 3 3
 1 2 3
 4 5 6
 7 8 9
-
+```
 3 tasks 3 machines
 
 
