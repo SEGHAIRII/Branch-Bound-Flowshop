@@ -13,6 +13,6 @@ struct PFSPInstance {
 };
 
 PFSPInstance readInstance(const std::string& filename);
-void printSolution(const PFSPInstance& instance, const BnBResult& result);
+// void printSolution(const PFSPInstance& instance, const BnBResult& result);
 
 #endif
