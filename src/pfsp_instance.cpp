@@ -27,5 +27,13 @@ PFSPInstance readInstance(const std::string& filename) {
 }
 
 void printSolution(const PFSPInstance& instance, const BnBResult& result) {
-    // #todo Charlie
+    std::cout << "Optimal Job Schedule: ";
+    for (int job : result.schedule) {
+        std::cout << job << " ";
+    }
+    std::cout << std::endl;
+
+    std::cout << "Upper Bound (Makespan): " << result.upper_bound << std::endl;
+    std::cout << "Lower Bound: " << result.lower_bound << std::endl;
+    std::cout << "Final Makespan: " << result.makespan << std::endl;
 }

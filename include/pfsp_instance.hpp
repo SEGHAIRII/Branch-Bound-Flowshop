@@ -1,8 +1,11 @@
 #ifndef PFSP_INSTANCE_HPP
 #define PFSP_INSTANCE_HPP
 
+#include "bnb.hpp"
 #include <vector>
 #include <string>
+
+struct BnBResult;
 
 struct PFSPInstance {
     int n;                  // Number of jobs
@@ -13,6 +16,6 @@ struct PFSPInstance {
 };
 
 PFSPInstance readInstance(const std::string& filename);
-// void printSolution(const PFSPInstance& instance, const BnBResult& result);
+void printSolution(const PFSPInstance& instance, const BnBResult& result);
 
 #endif
