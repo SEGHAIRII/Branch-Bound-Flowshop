@@ -25,3 +25,10 @@ set(SOURCES
 # Add the main executable with a lowercase, hyphen-free name
 add_executable(branch_bound_flowshop ${SOURCES})
 
+# Add a separate executable for ivm_test
+set(IVM_TEST_SOURCES
+    src/ivm_test.cpp
+    src/ivm.cpp
+)
+
+add_executable(ivm_test ${IVM_TEST_SOURCES})
