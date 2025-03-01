@@ -94,12 +94,12 @@ int nehHeuristic(const PFSPInstance &instance)
             int value = computeCompletion(tempVec, instance.m - 1, instance); // Evaluate the configuration
             if (value < currentBestValue)                                     // if configuration beats current best configuration
             {
-                currentBestValue = value;         // update the best currentValue
-                currentBest = tempVec; // update the best currentVector
+                currentBestValue = value; // update the best currentValue
+                currentBest = tempVec;    // update the best currentVector
             }
         }
-        bestValue = currentBestValue;  // update the bestValue
-        best = currentBest; // update the best vector
+        bestValue = currentBestValue; // update the bestValue
+        best = currentBest;           // update the best vector
     }
 
     return bestValue;
