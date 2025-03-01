@@ -1,5 +1,10 @@
 #include "utils.hpp"
 
+// if one of the two functions return incorrect results, please make sure the following is confirmed before digging into the code :
+// the n and m values of instance match the actual structure p
+// k represents of the kth machine "0-based" meaning that if there are 5 machines, then the 5th machine must be refered to as k = 4
+// seq must contains integers from a value pool of 0 to n-1 "with n being the number of total jobs"
+
 int computeCompletion(const std::vector<int> &seq, int k, const PFSPInstance &instance)
 {
     // inorder to compute the completion time of sigma1 sequence up to the kth machine
