@@ -88,7 +88,7 @@ int nehHeuristic(const PFSPInstance &instance)
         int currentBestValue = INT_MAX;
         for (int j = 0; j <= best.size(); j++)
         {
-            std::vector<int> tempVec = currentBest;           // Copy the original sequence
+            std::vector<int> tempVec = best;                  // Copy the original sequence
             tempVec.insert(tempVec.begin() + j, currentTask); // Insert at position j the currentTask "generate a possible configuration"
 
             int value = computeCompletion(tempVec, instance.m - 1, instance); // Evaluate the configuration
