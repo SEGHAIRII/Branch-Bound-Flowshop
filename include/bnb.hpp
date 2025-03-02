@@ -11,6 +11,6 @@ struct BnBResult {
     int makespan;              // Same as upper_bound
 };
 
-BnBResult branchAndBound(PFSPInstance& instance);
+// BnBResult branchAndBound(PFSPInstance& instance);
 
 #endif

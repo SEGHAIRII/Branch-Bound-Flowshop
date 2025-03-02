@@ -1,8 +1,10 @@
 #ifndef PFSP_INSTANCE_HPP
 #define PFSP_INSTANCE_HPP
 
+#include "bnb.hpp"
 #include <vector>
 #include <string>
+
 
 struct PFSPInstance
 {
