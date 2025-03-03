@@ -15,6 +15,31 @@ IVM::IVM(int n) {
     }
 }
 
+IVM::IVM(int n, const std::vector<int>& lb1_values) {
+    I = 0;
+    V.resize(n, 0);
+    M.resize(n);
+    direction.resize(n, 0); // Assuming forward branching as specified
+    
+    // Create pairs of jobs and their LB1 values
+    std::vector<std::pair<int, int>> job_lb_pairs;
+    for (int i = 0; i < n; i++) {
+        job_lb_pairs.push_back({i + 1, lb1_values[i]}); // Jobs are 1-indexed
+    }
+    
+    // Sort by lower bound (DFLLB - Depth-First Least-Lower-Bound)
+    std::sort(job_lb_pairs.begin(), job_lb_pairs.end(), 
+              [](const std::pair<int, int>& a, const std::pair<int, int>& b) {
+                  return a.second < b.second; // Sort by LB1 value
+              });
+    
+    // Initialize the first row with all jobs sorted by LB values
+    M[0].resize(n);
+    for (int i = 0; i < n; i++) {
+        M[0][i] = job_lb_pairs[i].first;
+    }
+}
+
 void IVM::backtrack() {
     if (I > 0) {
         I--; // Move up one level

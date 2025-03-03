@@ -12,6 +12,9 @@ struct IVM {
     // Constructor: Initializes the IVM for n jobs, setting up the root level (I=0) with all jobs available
     IVM(int n);
 
+    // New constructor: Initializes the IVM for n jobs, sorting them by lb1_values
+    IVM(int n, const std::vector<int>& lb1_values);
+
     // Moves the search back to a previous level when the current level's subproblems are exhausted
     // Updates I and V to point to the next unexplored node or terminate if none remain
     void backtrack();

@@ -48,8 +48,13 @@ void printIVMState(const IVM& ivm) {
 // Test case
 void testIVM(int n) {
     std::cout << "Initializing IVM with " << n << " jobs...\n";
-    IVM ivm(n);
+    // Generate random lower bound values for jobs
     std::srand(std::time(0)); // Seed for random lb1 values
+    std::vector<int> lb1_values(n);
+    for (size_t i = 0; i < n; i++) {
+        lb1_values[i] = std::rand() % 100; // Random values between 0-99
+    }
+    IVM ivm(n, lb1_values);
 
     while (ivm.hasNext()) {
         // Print the state of IVM
